@@ -11,5 +11,20 @@ package com.thoughtworks.tw101.exercises.exercise6;
 public class Main {
     public static void main(String[] args) {
 
+        Orc orc1 = new Orc();
+        Orc orc2 = new Orc();
+        Troll troll1 = new Troll();
+        Troll troll2 = new Troll();
+        Troll troll3 = new Troll();
+        Monster[] monsters = {orc1, orc2, troll1, troll2, troll3};
+
+
+        for(int i=0; i<monsters.length; i++){
+            monsters[i].takeDamage(10);
+        }
+
+        for(int j=0; j<monsters.length;j++) {
+            System.out.printf(monsters[j].reportStatus());
+        }
     }
 }
